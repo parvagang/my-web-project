@@ -1,0 +1,121 @@
+.archive-title {
+    text-align: center;
+    color: #D6B36A;
+    font-size: 55px;
+    font-weight: normal;
+}
+
+.subtitle {
+    text-align: center;
+    color: #D6DCE8;
+    font-size: 24px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    isolation: isolate;
+    perspective: 1000px;
+}
+
+.card {
+    width: 260px;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    contain: layout;
+}
+
+
+
+.inner-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.inner-front,
+.inner-back {
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid #D6B36A;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    background-color: #414A63;
+    transform-origin: center center;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(145deg,
+            #414A63,
+            #30384D);
+}
+
+.inner-front::before,
+.inner-back::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(214, 179, 106, 0.45);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.card:hover .inner-front,
+.card:hover .inner-back {
+    border-color: #F5D58A;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.inner-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-front h2 {
+    color: #D6B36A;
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.inner-front p {
+    color: #D6DCE8;
+    font-size: 21px;
+}
+
+.inner-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.inner-back h2 {
+    color: #D6B36A;
+}
+
+.inner-back li {
+    color: #F5F3EE;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.inner-card.flipped {
+    transform: rotateY(180deg) translateZ(0);
+}

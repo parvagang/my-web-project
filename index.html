@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Eternal Archive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style = "color: rgb(108, 169, 255);">Hello, World!</h1>
-    <h2 style = "color: blue;">Welcome to my website!</h2>
-    <h3 style = "color: rgb(32, 248, 71);">About Me</h3>
-    <h3 style = "color: rgb(255, 108, 169);">My Hobbies</h3>
-    <h3 style = "color: rgb(108, 255, 169);">Reading Fiction:</h3>
-    <h3 style = "color: rgb(255, 0, 30);">Favorite fictional novels ordered</h3>
-    <ol>
-        <li >Reverend Insanity</li>
-        <li>Lord of the Mysteries</li>
-        <li>Shadow Slave</li>
-    </ol>
-    <h3 style = "color: rgb(0, 255, 255);">Favorite fictional novels unordered</h3>
-    <ul>
-        <li>Reverend Insanity</li>
-        <li>Lord of the Mysteries</li>
-        <li>Shadow Slave</li>
-    </ul>
-    <form>
-        <label for="email">enter your email:</label>
-        <input type="email" id="email" name="email" required placeholder="enter your email">
-        <br> <br>
-        <label for="password">enter your password:</label>
-        <input type="password" id="password" name="password" required placeholder="enter your password">
-        <br> <br>
-        <label for="remember">Remember me:</label>
-        <input type="checkbox" id="remember" name="remember">
-        <br> <br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-        <br> <br>
 
-        <button type="submit">Submit</button>
-    </form>
+
+<body>
+    <main>
+        <h1 class="archive-title">The Eternal Archive</h1>
+        <p class="subtitle">Your ultimate destination for timeless literature</p>
+
+        <section class="categories">
+
+            <!-- fiction card -->
+            <div class="card">
+                <div class="inner-card">
+                    <div class="inner-front">
+                        <h2>Fiction</h2>
+                        <p>World beyond imagination</p>
+                    </div>
+
+                    <div class="inner-back">
+                        <h2>Fiction Nest</h2>
+                        <ul>
+                            <li>Reverend Insanity</li>
+                            <li>Lord of the Mysteries</li>
+                            <li>Shadow Slave</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Fiction card -->
+            <div class="card">
+                <div class="inner-card">
+                    <div class="inner-front">
+                        <h2>Non-Fiction</h2>
+                        <p>Knowledge and reality</p>
+                    </div>
+
+                    <div class="inner-back">
+                        <h2>Non-Fiction Nest</h2>
+                        <ul>
+                            <li>Sapiens</li>
+                            <li>Becoming</li>
+                            <li>Crooked House</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="inner-card">
+                    <div class="inner-front">
+                        <h2>Manga</h2>
+                        <p>Stories through illustrations</p>
+                    </div>
+
+                    <div class="inner-back">
+                        <h2>Manga World</h2>
+                        <ul>
+                            <li>Berserk</li>
+                            <li>Vagabond</li>
+                            <li>20th Century Boys</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
+
+
 </html>
